@@ -77,7 +77,6 @@ public class OrdenCuerpoController {
         actualizarOrdenCuerpo.setValor_total(ordenCuerpo.getValor_total());//
         actualizarOrdenCuerpo.setTipo_transporte(ordenCuerpo.getTipo_transporte());//
         actualizarOrdenCuerpo.setNum_cheque(ordenCuerpo.getNum_cheque());//
-        actualizarOrdenCuerpo.setNum_tarjeta(ordenCuerpo.getNum_tarjeta());//
         actualizarOrdenCuerpo.setLocal_retiro(ordenCuerpo.getLocal_retiro());//
         actualizarOrdenCuerpo.setImagen_destinatario(ordenCuerpo.getImagen_destinatario());//
         ordenCuerpoService.crearOrdenCuerpo(actualizarOrdenCuerpo);

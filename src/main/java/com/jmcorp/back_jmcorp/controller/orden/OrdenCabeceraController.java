@@ -62,6 +62,7 @@ public class OrdenCabeceraController {
         actualizarOrdenCabecera.setFechainicio(ordenCab.getFechainicio());
         actualizarOrdenCabecera.setSecuencia(ordenCab.getSecuencia());
         actualizarOrdenCabecera.setDestinatario(ordenCab.getDestinatario());
+        actualizarOrdenCabecera.setLocal(ordenCab.getLocal());
         ordenCabeceraService.crearOrdenCabecera(actualizarOrdenCabecera);
         return actualizarOrdenCabecera;
     }

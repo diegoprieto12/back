@@ -38,6 +38,10 @@ public class TOrdenCabecera implements Serializable {
     private String secuencia;
 
     @ManyToOne
+    @JoinColumn(name = "id_local")
+    private TLocal local;
+
+    @ManyToOne
     @JoinColumn(name = "id_empresa")
     private TEmpresa empresa;
 
@@ -62,7 +66,8 @@ public class TOrdenCabecera implements Serializable {
 
     public TOrdenCabecera(Date fecha, Date fechaentrega, Date fechainicio, Date fechafin,
             String observacion, String secuencia, TEmpresa empresa, TCliente cliente, TUsuario usuario,
-            TDestinatario destinatario) {
+            TDestinatario destinatario, TLocal local) {
+        this.local= local;
         this.fecha = fecha;
         this.fechaentrega = fechaentrega;
         this.fechainicio = fechainicio;
@@ -73,6 +78,14 @@ public class TOrdenCabecera implements Serializable {
         this.cliente = cliente;
         this.usuario = usuario;
         this.destinatario = destinatario;
+    }
+
+    public TLocal getLocal() {
+        return local;
+    }
+
+    public void setLocal(TLocal local) {
+        this.local = local;
     }
 
     public String getSecuencia() {

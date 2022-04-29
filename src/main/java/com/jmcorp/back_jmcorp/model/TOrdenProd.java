@@ -24,7 +24,7 @@ public class TOrdenProd {
     private String hora;
     private String observacion;
     private String autorizacion;
-
+    private String imagen;
     @ManyToOne
     @JoinColumn(name = "id_usuario")
     private TUsuario usuario;

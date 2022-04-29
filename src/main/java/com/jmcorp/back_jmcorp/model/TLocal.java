@@ -44,6 +44,9 @@ public class TLocal implements Serializable {
     @OneToMany(mappedBy = "local")
     private List<TProductoComprometido> producto_comprometido;
 
+    @OneToMany(mappedBy = "local")
+    private List<TOrdenCabecera> ordencabecera;
+
     @JsonIgnore
     @OneToOne(mappedBy = "local")
     private TPedido pedido;
